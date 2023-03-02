@@ -1,13 +1,11 @@
 import Navbar from '@/components/Home/Navbar';
 import Link from 'next/link';
-
+import Layout from '@/components/layout/Layout';
 const NotFound = () => {
   return (
     <div className="main-container">
-      <>
-        <Navbar />
-
-        <div className="  flex items-center">
+      <Layout>
+        <div className=" lg:ml-[170px] flex mt-24 items-center">
           <div className=" flex flex-col mx-auto md:flex-row items-center justify-center px-5 text-gray-700">
             <div className="max-w-md">
               <div className="text-5xl font-dark font-bold">404</div>
@@ -203,7 +201,7 @@ const NotFound = () => {
             </div>
           </div>
         </div>
-      </>
+      </Layout>
     </div>
   );
 };
