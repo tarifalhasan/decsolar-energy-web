@@ -1,6 +1,8 @@
 import moneda from '@/../../public/img/moneda-dec-final 3.svg';
 import Image from 'next/image';
 import DasboardButton from '../../components/ui/DasboardButton';
+
+import Modal from '@/components/ui/Modal';
 const Card = ({
   titile,
   StakingAPR,
@@ -10,9 +12,11 @@ const Card = ({
   CooldownPeriod,
   totalClaimble,
   cliamPerMonth,
+  isOpen,
+  toggleDrawer,
 }) => {
   return (
-    <div className="bg-skin-white px-5 shadow-lg rounded-[6px]">
+    <div className="bg-skin-white  z-50 px-5 shadow-lg rounded-[6px]">
       <div className="">
         <div className="flex  py-5  gap-9 ">
           <h2 className="text-[1.500em] leading-[148%] text-[#333333]">
@@ -24,7 +28,7 @@ const Card = ({
         </div>
         <hr className="h-[3px] w-full px-3 bg-black opacity-30" />
       </div>
-      <div className="py-8 flex gap-3">
+      <div className="py-8 z-50 flex gap-3">
         <div className="basis-[45%] border-r border-slate-400 pr-2">
           <div className="logo items-center gap-3 flex ">
             <Image src={moneda} alt="moneda" />
@@ -52,10 +56,11 @@ const Card = ({
           </ul>
 
           <div className="w-full py-4">
-            <DasboardButton name="Stake" />
+            <DasboardButton name="Stake" onClick={toggleDrawer} />
           </div>
         </div>
-
+        {/* Drawer */}
+        <Modal toggleDrawer={toggleDrawer} isOpen={isOpen} />
         <div className="basis-[55%] text-center ">
           <div className="flex flex-col gap-2">
             <h2 className="text-lg text-skin-lightDark">Staked {titile}</h2>

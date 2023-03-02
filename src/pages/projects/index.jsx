@@ -1,4 +1,5 @@
 import Layout from '@/components/layout/Layout';
+import Tabs from '@/components/layout/Tabs';
 import { getAllProjects } from '@/lib/helper';
 
 import Card from './Card';
@@ -7,9 +8,10 @@ const Project = () => {
   const project = getAllProjects();
   return (
     <Layout>
-      <div className="ml-[334px]">
+      <div className="lg:ml-[280px] px-4">
         <Header />
-        <div className="px-6 grid pt-10 lg:grid-cols-2 gap-4">
+        <Tabs />
+        <div className=" grid pt-4 grid-cols-1 lg:grid-cols-2 gap-4">
           {project?.map((project, index) => (
             <Card
               key={index}

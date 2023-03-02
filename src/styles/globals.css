@@ -14,7 +14,7 @@
     @apply h-full;
   }
   body {
-    @apply font-varela h-full;
+    @apply font-varela bg-skin-dark h-full;
   }
 }
 
@@ -29,4 +29,22 @@
     @apply bg-skin-green;
     color: #fff !important;
   }
+  .EZDrawer .EZDrawer__container {
+    position: absolute !important;
+    visibility: hidden;
+    background: white;
+    transition: all;
+    margin: 0 auto;
+    top: 10% !important;
+    width: 400px !important;
+    /* box-shadow: 0 0 10px 5px rgb(0 0 0 / 10%); */
+  }
+  nav#EZDrawer__container7ss27 {
+    top: 10% !important;
+  }
+}
+.EZDrawer .EZDrawer__checkbox:checked ~ .EZDrawer__container {
+  visibility: visible;
+  transform: translate3d(0, 0, 0) !important;
+  margin: 0 auto;
 }

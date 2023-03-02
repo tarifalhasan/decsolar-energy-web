@@ -5,11 +5,12 @@ import Logo from '@/../../public/img/Logo.svg';
 import LanguagrIcon from '@/../../public/img/lang.svg';
 import { navLinks } from '@/data/data';
 import Button from '../ui/Button';
+import { useState } from 'react';
 const Navbar = () => {
   const router = useRouter();
-
+  const [lan, setLang] = useState('');
   return (
-    <header className="bg-skin-lightDark max-w-[1764px] mx-auto">
+    <header className="bg-skin-lightDark hidden md:block max-w-[1764px] mx-auto">
       <nav className="flex  mx-auto items-center justify-between px-6 ">
         <div className="brand">
           <Image src={Logo} alt="decsolar energy" width={120} height={60} />
@@ -21,7 +22,7 @@ const Navbar = () => {
                 <Link
                   className={` ${
                     router.pathname === link.slug ? 'text-skin-green' : ''
-                  } font-poppins hover:text-skin-green transition duration-300 ease-in-out text-sm`}
+                  } font-poppins hover:text-skin-green transition duration-300 ease-in-out text-slate-50 text-sm`}
                   href={link.slug}
                 >
                   {link.name}
@@ -32,7 +33,11 @@ const Navbar = () => {
 
           <div className="flex mx-4 items-center gap-1">
             <Image src={LanguagrIcon} width={25} height={25} alt="english" />
-            <select className="border-0 focus:outline-none font-poppins text-[18px] bg-transparent">
+            <select
+              onChange={e => setLang(e.target.value)}
+              defaultValue={lan}
+              className="border-0 text-slate-50 focus:outline-none font-poppins text-[18px] bg-transparent"
+            >
               <option
                 className="text-white  border-0 focus:border-0 bg-skin-lightDark"
                 selected
@@ -42,7 +47,6 @@ const Navbar = () => {
               </option>
               <option
                 className="text-white  border-0 focus:border-0 bg-skin-lightDark"
-                selected
                 value={'CS'}
               >
                 CS

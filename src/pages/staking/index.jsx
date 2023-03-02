@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Layout from '@/components/layout/Layout';
 import Navbar from './Navbar';
 import Ethereum from '@/../../public/img/Ethereum.svg';
@@ -7,13 +8,24 @@ import Safety from '@/../../public/img/Safety.svg';
 import Link from 'next/link';
 import Card from './Staking';
 import { StakingData } from '@/data/data';
-const dashboard = () => {
+
+//import styles 👇
+import 'react-modern-drawer/dist/index.css';
+
+const Staking = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleDrawer = () => {
+    setIsOpen(prevState => !prevState);
+
+    console.log(isOpen);
+  };
+
   return (
     <Layout>
-      <div className="ml-[334px]">
+      <div className="lg:ml-[280px] px-4">
         <Navbar />
 
-        <div className="main-content  gap-5 flex p-4 flex-col flex-grow ">
+        <div className="main-content  gap-5 flex flex-col flex-grow ">
           <div className="top">
             <div className="heading">
               <h2 className="flex items-center gap-2">
@@ -59,6 +71,8 @@ const dashboard = () => {
                 CooldownPeriod={staking.CooldownToUnstake.CooldownPeriod}
                 totalClaimble={staking.Claim.totalClaimble}
                 cliamPerMonth={staking.Claim.cliamPerMonth}
+                isOpen={isOpen}
+                toggleDrawer={toggleDrawer}
               />
             ))}
           </div>
@@ -68,4 +82,4 @@ const dashboard = () => {
   );
 };
 
-export default dashboard;
+export default Staking;

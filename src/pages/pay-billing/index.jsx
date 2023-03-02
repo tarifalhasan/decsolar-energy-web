@@ -7,9 +7,9 @@ import Button from '@/components/ui/Button';
 const PayBill = () => {
   return (
     <Layout>
-      <div className="ml-[334px]">
+      <div className="lg:ml-[280px] px-4">
         <Navbar />
-        <div className="main-content  gap-5 flex p-4 flex-col flex-grow ">
+        <div className="main-content pt-2 gap-5 flex  flex-col flex-grow ">
           <div className="bg-white max-w-[900px] rounded-[5px]">
             {payBilling.map((data, i) => (
               <div key={i} className="px-5  py-8">

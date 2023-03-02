@@ -8,7 +8,7 @@ const Sidebar = () => {
   const router = useRouter();
 
   return (
-    <div className="h-full py-4 flex flex-col justify-between	fixed w-[334px] bg-skin-white">
+    <div className="h-full py-4  lg:flex flex-col justify-between	fixed w-[290px] bg-skin-white">
       <div>
         <div className="sidebar-header flex items-center justify-center">
           <div className="">

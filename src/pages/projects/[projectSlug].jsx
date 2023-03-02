@@ -9,11 +9,12 @@ import Header from './Header';
 import Participate from './singleProject/Participate';
 import Chart from './singleProject/Chart';
 import EstimateYourProfits from './singleProject/EstimateYourProfits';
+import Tabs from '@/components/layout/Tabs';
 
 const SingleProduct = ({ project }) => {
   return (
-    <main className="flex gap-4 bg-[#F7F6F9] flex-row min-h-screen">
-      <div className="h-full 	fixed w-[334px] bg-skin-white">
+    <main className="flex max-w-[1764px] mx-auto gap-4 bg-[#F7F6F9] flex-row min-h-screen">
+      <div className="h-full  hidden lg:block	fixed w-[334px] bg-skin-white">
         <div className="sidebar-header flex items-center justify-center">
           <div className="">
             <Link href="/">
@@ -32,8 +33,8 @@ const SingleProduct = ({ project }) => {
               >
                 <span
                   className={`h-[45px] flex ${
-                    i === 2 ? 'active text-white' : ''
-                  }   items-center gap-x-4 pl-[2.5rem]`}
+                    i === 1 ? 'active text-white' : ''
+                  }   items-center gap-x-4 rounded-l-full pl-[2.5rem]`}
                 >
                   <span>{link.icon}</span>
                   <span>{link.name}</span>
@@ -47,9 +48,10 @@ const SingleProduct = ({ project }) => {
         </div>
       </div>
       {project?.map(p => (
-        <main className="ml-[334px] px-6" key={p.slug}>
+        <main className="lg:ml-[334px] px-6" key={p.slug}>
           <div className="py-5">
             <Header />
+            <Tabs />
           </div>
           <div className="flex flex-col lg:flex-row gap-4">
             <Info
