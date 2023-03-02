@@ -44,8 +44,8 @@ const Card = ({
               Project Cost
             </span>
             <span className="text-[0.8em text-skin-green font-manrope]">
-              <span className="block">{cost.dollar}$</span>
-              or <span>{cost.twoP2}$</span>
+              <span className="block">200$</span>
+              or <span>200$</span>
             </span>
           </li>
           <li className="">
