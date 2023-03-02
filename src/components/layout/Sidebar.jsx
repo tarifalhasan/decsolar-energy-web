@@ -8,8 +8,8 @@ const Sidebar = () => {
   const router = useRouter();
 
   return (
-    <div className="h-full py-4  lg:flex flex-col justify-between	fixed w-[290px] bg-skin-white">
-      <div>
+    <div className="h-full py-4   lg:flex flex-col justify-between	fixed w-[290px] bg-skin-white">
+      <div className="">
         <div className="sidebar-header flex items-center justify-center">
           <div className="">
             <Link href="/">
@@ -40,15 +40,15 @@ const Sidebar = () => {
             ))}
           </div>
         </div>
-      </div>
-      <div className="flex  mt-4 items-center justify-center gap-3">
-        <IoLogOut size={25} className="text-skin-green" />
-        <Link
-          href={'logout'}
-          className="text-[1.3em] text-skin-green font-manrope font-medium"
-        >
-          Logout
-        </Link>
+        <div className="flex  mt-20 top-[90%] items-center justify-center gap-3">
+          <IoLogOut size={25} className="text-skin-green" />
+          <Link
+            href={'logout'}
+            className="text-[1.3em] text-skin-green font-manrope font-medium"
+          >
+            Logout
+          </Link>
+        </div>
       </div>
     </div>
   );
