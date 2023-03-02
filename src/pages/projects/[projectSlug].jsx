@@ -1,4 +1,3 @@
-import Layout from '@/components/layout/Layout';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getAllProjects } from '@/lib/helper';
@@ -6,17 +5,12 @@ import Info from './singleProject/Info';
 import { sideLinks } from '@/data/data';
 import logo from '../../../public/img/Logo-sin-fondo.svg';
 import Header from './Header';
-import { useRouter } from 'next/router';
+
 import Participate from './singleProject/Participate';
 import Chart from './singleProject/Chart';
 import EstimateYourProfits from './singleProject/EstimateYourProfits';
 
 const SingleProduct = ({ project }) => {
-  const router = useRouter();
-  const { projectSlug } = router.query;
-  const slug = project.map(p => p.slug);
-  console.log(projectSlug, 'projectQUEry');
-  console.log(slug[0]);
   return (
     <main className="flex gap-4 bg-[#F7F6F9] flex-row min-h-screen">
       <div className="h-full 	fixed w-[334px] bg-skin-white">

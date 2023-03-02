@@ -114,8 +114,8 @@ export const projects = [
     slug: 'hospital-ofbaranquilla',
     location: 'Baranquilla, Colombia',
     projectCost: {
-      dollar: '$500,000 ',
-      twoP2: '1,000,000 P2P',
+      dollar: '500,000 ',
+      twoP2: '1,000,000',
     },
     APR: '12.2%',
     Date: '28/09/23',
@@ -170,8 +170,8 @@ export const projects = [
     slug: 'btc-miningtexas',
     location: 'Houston, USA',
     projectCost: {
-      dollar: '$500,000 ',
-      twoP2: '1,000,000 P2P',
+      dollar: '500,000 ',
+      twoP2: '1,000,000',
     },
     APR: '12.2%',
     Date: '28/12/23',
@@ -226,8 +226,8 @@ export const projects = [
     slug: 'university-of-cape-town',
     location: 'Cape Town, South Africa',
     projectCost: {
-      dollar: '$500,000 ',
-      twoP2: '1,000,000 P2P',
+      dollar: '500,000 ',
+      twoP2: '1,000,000',
     },
     APR: '12.2%',
     Date: '28/09/23',
@@ -283,8 +283,8 @@ export const projects = [
 
     location: 'Houston, USA',
     projectCost: {
-      dollar: '$500,000 ',
-      twoP2: '1,000,000 P2P',
+      dollar: '500,000',
+      twoP2: '1,000,000',
     },
     APR: '12.2%',
     Date: '28/12/23',
