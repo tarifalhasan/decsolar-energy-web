@@ -46,7 +46,7 @@ const SingleProduct = ({ project }) => {
           <Link href={'logout'}>Logout</Link>
         </div>
       </div>
-      {project.map(p => (
+      {project?.map(p => (
         <main className="ml-[334px] px-6" key={p.slug}>
           <div className="py-5">
             <Header />

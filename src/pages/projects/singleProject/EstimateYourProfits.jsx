@@ -38,7 +38,7 @@ const EstimateYourProfits = ({ EstimateYourProfits }) => {
                 Net Profit
               </span>
               <span className="inline-flex text-md text-skin-green font-semibold">
-                {EstimateYourProfits.NetProfit}$
+                {EstimateYourProfits?.NetProfit}$
               </span>
             </li>
             <li className="flex justify-between">
@@ -46,7 +46,7 @@ const EstimateYourProfits = ({ EstimateYourProfits }) => {
                 Bonus Profit
               </span>
               <span className="inline-flex text-md text-skin-green font-semibold">
-                {EstimateYourProfits.BonusProfit}$
+                {EstimateYourProfits?.BonusProfit}$
               </span>
             </li>
             <hr className="h-[2px] opacity-40 bg-skin-muted w-full " />
@@ -56,8 +56,8 @@ const EstimateYourProfits = ({ EstimateYourProfits }) => {
               </span>
               <span className="inline-flex text-md text-skin-green font-semibold">
                 {Math.floor(
-                  EstimateYourProfits.NetProfit +
-                    EstimateYourProfits.BonusProfit
+                  EstimateYourProfits?.NetProfit +
+                    EstimateYourProfits?.BonusProfit
                 )}
                 $
               </span>
