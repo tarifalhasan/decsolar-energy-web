@@ -1,12 +1,29 @@
 import Image from 'next/image';
-const Card = ({ image, projectName, location, cost, Completed, ARP, Date }) => {
+import Link from 'next/link';
+const Card = ({
+  image,
+  projectName,
+  slug,
+  location,
+  cost,
+  Completed,
+  ARP,
+  Date,
+}) => {
   return (
     <div className="bg-white rounded-[10px]">
-      <Image className="max-h-[183px] w-full" src={image} alt={'sd'} />
+      <Link href={`projects/${slug}`}>
+        <Image
+          className="max-h-[183px] rounded-xl object-cover h-[183px] aspect-video	 w-full"
+          src={image}
+          alt={'sd'}
+        />
+      </Link>
+
       <div className=" p-5 ">
         <div className="flex items-center justify-between">
           <h2 className="text-[1.1em] font-manrope font-medium">
-            {projectName}
+            <Link href={`projects/${slug}`}>{projectName}</Link>
           </h2>
           <span className="text-[1.1em] font-manrope font-normal text-skin-muted">
             {location}

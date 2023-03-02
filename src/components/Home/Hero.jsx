@@ -7,8 +7,8 @@ import { FcGoogle } from 'react-icons/fc';
 import metamask from '@/../../public/img/metamask.svg';
 const Hero = () => {
   return (
-    <div className="bg-skin-dark h-screen overflow-y-hidden text-skin-white max-w-[1764px] mx-auto px-10">
-      <div className="py-16 grid gap-10 lg:grid-cols-2">
+    <div className="bg-skin-dark overflow-y-hidden text-skin-white max-w-[1764px] mx-auto px-10">
+      <div className="pt-16 grid  gap-10 lg:grid-cols-2">
         <div>
           <Image src={heroImage} alt="decsolar" width={600} height={600} />
         </div>

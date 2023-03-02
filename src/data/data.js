@@ -21,33 +21,38 @@ export const navLinks = [
   },
 ];
 import { HiHome } from 'react-icons/hi';
-
+import {
+  AiFillSetting,
+  AiFillInteraction,
+  AiFillAppstore,
+} from 'react-icons/ai';
+import { MdPayment } from 'react-icons/md';
 // sideLinks
 export const sideLinks = [
   {
     name: 'Staking',
     slug: '/staking',
-    icon: <HiHome size={24} className="text-[#666666]" />,
+    icon: <HiHome size={24} />,
   },
   {
     name: 'Projects',
     slug: '/projects',
-    icon: <HiHome size={24} className="text-[#666666]" />,
+    icon: <AiFillInteraction size={24} />,
   },
   {
     name: 'Buy/Sell',
     slug: '/buy/sell',
-    icon: <HiHome size={24} className="text-[#666666]" />,
+    icon: <AiFillAppstore size={24} />,
   },
   {
     name: 'Liquidity Pool ',
     slug: '/liquidity-pool',
-    icon: <HiHome size={24} className="text-[#666666]" />,
+    icon: <AiFillSetting size={24} />,
   },
   {
     name: 'Pay Bill',
     slug: '/pay-billing',
-    icon: <HiHome size={24} className="text-[#666666]" />,
+    icon: <MdPayment size={24} />,
   },
 ];
 
@@ -106,7 +111,7 @@ export const projects = [
   {
     featureImage: product1,
     projectName: 'Hospital Of Baranquilla',
-    slug: 'products/hospital-ofbaranquilla',
+    slug: 'hospital-ofbaranquilla',
     location: 'Baranquilla, Colombia',
     projectCost: {
       dollar: '$500,000 ',
@@ -150,7 +155,7 @@ export const projects = [
     FirstEstimatedProfitability: '15/09/23',
     EstimateYourProfits: {
       NetProfit: 938613.18,
-      BonusProfit: '$0,000',
+      BonusProfit: 0,
     },
     graph: {
       PreSaleDescount: '0.00%',
@@ -200,13 +205,13 @@ export const projects = [
       },
     ],
     CostOf1P2P: '.50 USD',
-    NetProfit: 14.7,
+    NetProfit: 44.7,
     StartOfInstallation: '22/02/23',
     EstimatedStartOfOperation: '11/08/23',
     FirstEstimatedProfitability: '15/09/23',
     EstimateYourProfits: {
       NetProfit: 938613.18,
-      BonusProfit: '$0,000',
+      BonusProfit: 0,
     },
     graph: {
       PreSaleDescount: '0.00%',
@@ -262,7 +267,7 @@ export const projects = [
     FirstEstimatedProfitability: '15/09/23',
     EstimateYourProfits: {
       NetProfit: 938613.18,
-      BonusProfit: '$0,000',
+      BonusProfit: 0,
     },
     graph: {
       PreSaleDescount: '0.00%',
@@ -274,7 +279,7 @@ export const projects = [
   {
     featureImage: product4,
     projectName: 'Silver Trail Middle School',
-    projectName: 'silver-trail-middle-school',
+    slug: 'silver-trail-middle-school',
 
     location: 'Houston, USA',
     projectCost: {
@@ -313,13 +318,13 @@ export const projects = [
       },
     ],
     CostOf1P2P: '.50 USD',
-    NetProfit: 14.7,
+    NetProfit: 60,
     StartOfInstallation: '22/02/23',
     EstimatedStartOfOperation: '11/08/23',
     FirstEstimatedProfitability: '15/09/23',
     EstimateYourProfits: {
       NetProfit: 938613.18,
-      BonusProfit: '$0,000',
+      BonusProfit: 0,
     },
     graph: {
       PreSaleDescount: '0.00%',

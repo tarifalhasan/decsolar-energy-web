@@ -3,6 +3,9 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      // aspectRatio: {
+      //   '4/3': '4 / 3',
+      // },
       colors: {
         skin: {
           dark: 'var(--color-bg-dark)',

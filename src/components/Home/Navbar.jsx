@@ -36,14 +36,16 @@ const Navbar = () => {
               <option
                 className="text-white  border-0 focus:border-0 bg-skin-lightDark"
                 selected
+                value={'ES'}
               >
                 ES
               </option>
               <option
                 className="text-white  border-0 focus:border-0 bg-skin-lightDark"
                 selected
+                value={'CS'}
               >
-                ES
+                CS
               </option>
             </select>
           </div>
