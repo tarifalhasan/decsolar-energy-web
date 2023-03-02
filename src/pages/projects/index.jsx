@@ -1,15 +1,16 @@
 import Layout from '@/components/layout/Layout';
+import { getAllProjects } from '@/lib/helper';
 
-import { projects } from '@/data/data';
 import Card from './Card';
 import Header from './Header';
 const Project = () => {
+  const project = getAllProjects();
   return (
     <Layout>
       <div className="ml-[334px]">
         <Header />
         <div className="px-6 grid pt-10 lg:grid-cols-2 gap-4">
-          {projects.map((project, index) => (
+          {project?.map((project, index) => (
             <Card
               key={index}
               image={project.featureImage}
