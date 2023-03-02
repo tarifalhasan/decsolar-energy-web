@@ -1,6 +1,14 @@
 import Image from 'next/image';
-
+import { useState, useEffect } from 'react';
 const Info = ({ image, pdtName, descripcion, services }) => {
+  const [service, setServices] = useState([]);
+
+  useEffect(() => {
+    if (services) {
+      setServices(services);
+    }
+  }, []);
+
   return (
     <div className="basis-[60%] flex flex-col gap-4 bg-white rounded-[15px] p-5">
       <div>
@@ -12,7 +20,7 @@ const Info = ({ image, pdtName, descripcion, services }) => {
       </div>
       <div>
         <ul className="flex justify-between gap-4">
-          {services.map((serveces, i) => (
+          {service?.map((serveces, i) => (
             <li className="" key={i}>
               <span className="text-[0.8em]  block font-manrope font-normal">
                 {serveces.name}
